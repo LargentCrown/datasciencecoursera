@@ -8,22 +8,22 @@ makeCacheMatrix <- function(x = matrix()) {
 }
      # stores the cached value
      #initialize to  Null
-     m <- NULL
+     inv <- NULL
      
    # creates the matrix in it's working environment
       set <- function(y){
       x <<- y
-      m <<- NULL
+      inv <<- NULL
 }
 
-   # get the value of the matrix
+   # get the solution of the matrix
       get <- function()x
   
    # invert the matrix and store in cache
-      setmatrix <- function(inverse)m <<- inverse
+      setmatrix <- function(inverse)inv <<- inverse
 
-   # get the inverspried matrix 
-      getinverse <- function()m
+   # get the inversed matrix 
+      getinverse <- function()inv
 
    # return the created functions to it's working environment
       list(set = set, get = get,
